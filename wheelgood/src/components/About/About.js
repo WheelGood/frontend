@@ -43,19 +43,6 @@ const About = () => {
         </div>
 
         <div className='cardContainer'>
-          <img className='image' src={brandon} />
-          <div className='devInfo'>
-            <h1 className='devName'>Brandon </h1>
-            <h1 className='devName'> Allison</h1>
-
-            <a className='github' href='https://github.com/BrandonJAllison'>
-              {' '}
-              <i className='fab fa-github'></i>
-            </a>
-          </div>
-        </div>
-
-        <div className='cardContainer'>
           <img className='image' src={candace} />
           <div className='devInfo'>
             <h1 className='devName'>Candace </h1>

@@ -33,7 +33,13 @@ const WheelGoodMap = withGoogleMap(props => {
     item.innerHTML = `
                 <h2>${obj.name}</h2>
                 <h3>${
-                  obj.ai_accessibility ? 'Accessible' : 'Not Accessible'
+                  obj.user_rating
+                    ? obj.user_rating > 2
+                      ? 'Accessible'
+                      : 'Not Accessible'
+                    : obj.ai_accessibility
+                    ? 'Accessible'
+                    : 'Not Accessible'
                 }</h3>
                 <p>${
                   obj.user_reviews.length
