@@ -20,8 +20,7 @@ const WheelGoodMap = withGoogleMap((props) => {
         const item = name.current;
         console.log(name)
         item.innerHTML = `
-                <h2>Selected Place:<h2/>
-                <h2>${obj.name}</h2>
+                <h2>Selected Place: ${obj.name}</h2>
                 <h3>${obj.ai_accessibility ? 'Accessible' : ' Potentially Not Accessible'}</h3>
                 <p>${obj.user_reviews.length ? `Review: ${obj.user_reviews[0].review}` : ''}</p>
                 <h4>Rating:${obj.user_rating?'⭐⭐⭐⭐⭐'.slice(0, obj.user_rating):"⭐⭐⭐"} </h4>
