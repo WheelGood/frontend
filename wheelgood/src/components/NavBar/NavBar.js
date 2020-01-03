@@ -34,11 +34,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-{/* <nav className='menu'>
-<Link to='#'>Home</Link>
-<Link to='#'>Map Legend</Link>
-<Link to='#'>About</Link>
-<Link to='#'>Contact</Link>
-</nav> */}
