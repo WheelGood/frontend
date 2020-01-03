@@ -1,5 +1,10 @@
 .modal{
     display: block;
+    border: 2px solid black;
+    background-color: rgb(55,75,144);
+    color: white;
+    padding: 5px;
+    margin:10px;
 }
 
 .marker{
@@ -31,6 +36,10 @@
 }
 
 .modalShow{
+    background-color: black;
+    color:white;
+    border: 2px solid white;
+    margin:2px;
     z-index: 1000 !important;
     padding: 5px;
     line-height: 1.25;

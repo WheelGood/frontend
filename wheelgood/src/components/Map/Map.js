@@ -19,11 +19,12 @@ const WheelGoodMap = withGoogleMap((props) => {
         
         const item = name.current;
         console.log(name)
-		item.innerHTML = `
+        item.innerHTML = `
+                <h2>Selected Place:<h2/>
                 <h2>${obj.name}</h2>
                 <h3>${obj.ai_accessibility ? 'Accessible' : ' Potentially Not Accessible'}</h3>
                 <p>${obj.user_reviews.length ? `Review: ${obj.user_reviews[0].review}` : ''}</p>
-                <h4>Rating:${'⭐⭐⭐⭐⭐'.slice(0, obj.user_rating)} </h4>
+                <h4>Rating:${obj.user_rating?'⭐⭐⭐⭐⭐'.slice(0, obj.user_rating):"⭐⭐⭐"} </h4>
                 `;
         item.style.left = `-300px`;
         item.style.top = `100px`;
@@ -39,16 +40,18 @@ const WheelGoodMap = withGoogleMap((props) => {
 					{props.isMarkerShown &&
 						places.map((item, idx) => {
 							return (
-								<div>
+                                <div>
+                                {idx===0&&<div ref={name} className={`modal $}{item.place_id}`}/>}
 									<div className='marker'>
 										<Marker
-											onClick={(e) => clickHandler(e, item)}
+                                            onClick={(e) => clickHandler(e, item)}
+                                            title={"test123"}
                                             position={{ lat: item.location.lat, lng: item.location.lng }}
                                         />
                                         
 										
                                     </div>
-                                    <div ref={name} className={`modal ${item.place_id}`} />
+                                     
 
                                         
                                     <div id={item.place_id} className='block'>
@@ -69,6 +72,15 @@ const WheelGoodMap = withGoogleMap((props) => {
 	);
 });
 
+ function rapper() {
+    return (
+        <div>
+            <div style={{height: `600px`, width: '70%',zIndex:0 }} />
+        </div>
+    )
+}
+
+
 function Map(props) {
 	return (
 		<div class='mapFlex'>
@@ -77,7 +89,7 @@ function Map(props) {
 				isMarkerShown
 				googleMapURL='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'
 				loadingElement={<div style={{ height: `100%` }} />}
-				containerElement={<div style={{ height: `600px`, width: '70%' }} />}
+				containerElement={<div style={{height: `600px`, width: '70%',zIndex:0 }} />}
 				mapElement={<div style={{ height: `93vh`, display: 'flex' }} />}
 			/>
 		</div>
