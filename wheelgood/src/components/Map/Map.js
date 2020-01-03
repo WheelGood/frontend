@@ -48,6 +48,11 @@ const WheelGoodMap = withGoogleMap(props => {
     item.style.left = `-300px`;
     item.style.top = `100px`;
     item.style.zIndex = '1000';
+    if (obj.ai_accessibility) {
+      item.classList.remove('inaccessible');
+    } else {
+      item.classList.add('inaccessible');
+    }
     item.classList.toggle('modalShow');
     console.log(e.ya.pageX, 'pageX');
   }

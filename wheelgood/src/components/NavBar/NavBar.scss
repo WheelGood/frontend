@@ -1,62 +1,58 @@
 .NavBar {
-    display: flex;
-    justify-content: space-between; 
-    background-color: #eaeaea;
-    height: 6.5vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eaeaea;
+  height: 6.5vh;
 }
 
-.logo{
-        
-        img{
-            margin: 3%;
-            width: 35%;
-        }
+.logo {
+  img {
+    margin: 3%;
+    width: 35%;
+  }
 }
 
-.container{
-    position: relative;
-    display: flex;
-
+.container {
+  position: relative;
+  display: flex;
 }
-.nav{
-    width: 20vw;
-    box-shadow: 1px 1px #888;
-    position: absolute;
-    top: 0;
-    z-index: 998;
-    background-color: rgb(55,75,144);
-    top: -23vw;
-    right: 0;
-    color:white;
-    font-weight: bold;
+.nav {
+  width: 20vw;
+  box-shadow: 1px 1px #888;
+  position: absolute;
+  top: 0;
+  z-index: 998;
+  background-color: #0066bf;
+  top: -23vw;
+  right: 0;
+  color: white;
+  font-weight: bold;
 }
 .nav.show {
-    top: 0;
+  top: 0;
 }
 
 .menu-button {
-    position: relative;
-    z-index: 999;
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 5px;
+  position: relative;
+  z-index: 999;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
-.menu-items{
-    padding: 0;
-    margin: 0;
-    
-    
+.menu-items {
+  padding: 0;
+  margin: 0;
 }
 
 .menu-list {
-    list-style: none;
+  list-style: none;
 }
 
 .menu-link {
-    text-decoration: none;
-    color:white;
-    display: flex;
-    padding: 10px 16px;
-    border-bottom: 1px solid black;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  padding: 10px 16px;
+  border-bottom: 1px solid black;
 }
