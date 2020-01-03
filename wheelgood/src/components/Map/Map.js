@@ -1,13 +1,14 @@
 import React, { Component, useEffect, useState, useRef } from 'react';
 import { GoogleMap, Marker, withGoogleMap } from 'react-google-maps';
-import data from './dummyPlaces';
 import axios from 'axios';
 import './Map.scss';
-import blueMarker from './WheelGood-blueMarker.png';
-import redMarker from './WheelGood-redMarker.png';
 
 const blueIcon = {
   url: 'https://i.imgur.com/kWesvjq.png',
+  scaledSize: { width: 32, height: 42 }
+};
+const yellowIcon = {
+  url: 'https://i.imgur.com/chNTv5e.png',
   scaledSize: { width: 32, height: 42 }
 };
 const redIcon = {
@@ -79,8 +80,8 @@ const WheelGoodMap = withGoogleMap(props => {
                         lng: item.location.lng
                       }}
                       icon={
-                        item.user_score
-                          ? item.user_score > 2
+                        item.user_rating
+                          ? item.user_rating > 2
                             ? blueIcon
                             : redIcon
                           : item.ai_accessibility
