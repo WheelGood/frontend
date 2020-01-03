@@ -60,7 +60,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+
+html{
+  overflow: hidden;
+}
+body{
     line-height: 1.65;
     font-family: 'Montserrat', sans-serif;
 }

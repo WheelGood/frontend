@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
+    margin: 2px;
 }
 
 
@@ -20,13 +22,16 @@
 }
 
 .googleMap{
-    width: 50%;
+    width: 30%;
     position: absolute;
-    left: 50%;
-    top: 8%;
+    left: 70%;
+    top: 7%;
+    height: 93vh;
+    overflow-y: scroll;
 }
 
 .modalShow{
+    z-index: 1000 !important;
     padding: 5px;
     line-height: 1.25;
     h2{
@@ -42,7 +47,6 @@
     }
     display: flex;
     flex-direction: column;
-    z-index: 100;
     position: absolute;
     width: 300px;
     height: 120px;
@@ -71,8 +75,3 @@
     
 }
 
-.test{
-    position: absolute;
-    left: 800px;
-    top: 200px;
-}
