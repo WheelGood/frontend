@@ -69,7 +69,7 @@ const WheelGoodMap = withGoogleMap(props => {
               return (
                 <div>
                   {idx === 0 && (
-                    <div ref={name} className={`modal $}{item.place_id}`} />
+                    <div ref={name} className={`modal ${item.place_id}`} />
                   )}
                   <div className='marker'>
                     <Marker
