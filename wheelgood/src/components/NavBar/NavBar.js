@@ -13,6 +13,7 @@ const NavBar = () => {
 
     <div className='NavBar'>
       <div className='logo'><img src={Logo} /></div>
+      <div className="search"><input type="search" results="5" name="s" placeholder="Search" /></div>
         <div className="container">
             <div className="menu-button" onClick={() => setOpen(!open)}>
               <i className="fas fa-bars"></i>
