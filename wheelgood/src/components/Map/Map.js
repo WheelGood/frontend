@@ -25,8 +25,8 @@ const WheelGoodMap = withGoogleMap((props) => {
                 <p>${obj.user_reviews.length ? `Review: ${obj.user_reviews[0].review}` : ''}</p>
                 <h4>Rating:${'⭐⭐⭐⭐⭐'.slice(0, obj.user_rating)} </h4>
                 `;
-        item.style.left = `${-e.ya.pageX - 10}px`;
-        item.style.top = `${-e.ya.pageY - 10}px`;
+        item.style.left = `-300px`;
+        item.style.top = `100px`;
         item.style.zIndex="1000"
 		item.classList.toggle('modalShow');
 		console.log(item);
@@ -43,12 +43,14 @@ const WheelGoodMap = withGoogleMap((props) => {
 									<div className='marker'>
 										<Marker
 											onClick={(e) => clickHandler(e, item)}
-											position={{ lat: item.location.lat, lng: item.location.lng }}
-										/>
-
+                                            position={{ lat: item.location.lat, lng: item.location.lng }}
+                                        />
+                                        
 										
-									</div>
-                                        <div ref={name} className={`modal ${item.place_id}`} />
+                                    </div>
+                                    <div ref={name} className={`modal ${item.place_id}`} />
+
+                                        
                                     <div id={item.place_id} className='block'>
                                     
 										<h1>
