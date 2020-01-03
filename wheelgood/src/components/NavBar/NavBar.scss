@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between; 
     background-color: #eaeaea;
+    height: 6.5vh;
 }
 
 .logo{
@@ -22,10 +23,12 @@
     box-shadow: 1px 1px #888;
     position: absolute;
     top: 0;
-    // z-index: 999;
-    background-color: #fff;
+    z-index: 998;
+    background-color: rgb(55,75,144);
     top: -23vw;
     right: 0;
+    color:white;
+    font-weight: bold;
 }
 .nav.show {
     top: 0;
@@ -36,11 +39,13 @@
     z-index: 999;
     font-size: 30px;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .menu-items{
     padding: 0;
     margin: 0;
+    
     
 }
 
@@ -50,7 +55,7 @@
 
 .menu-link {
     text-decoration: none;
-    color: black;
+    color:white;
     display: flex;
     padding: 10px 16px;
     border-bottom: 1px solid black;
